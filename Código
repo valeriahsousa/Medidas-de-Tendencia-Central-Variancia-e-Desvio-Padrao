@@ -1,0 +1,142 @@
+<html>
+
+<head>
+	<title> Página Exemplo </title>
+	<meta charset='utf-8' />
+	<script type='text/javascript'>
+		// defina os 4 numeros
+		var num1 = 0, num2 = 0, num3 = 0, num4 = 0;
+		num1 = window.prompt('Informe o 1º número!');
+		num2 = window.prompt('Informe o 2º número!');
+		num3 = window.prompt('Informe o 3º número!');
+		num4 = window.prompt('Informe o 4º número!');
+
+		// comparar cada par de números e trocá-los de posição
+		if (parseFloat(num1) > parseFloat(num2)) {
+			var temp = num1;
+			num1 = num2;
+			num2 = temp;
+		}
+
+		if (parseFloat(num2) > parseFloat(num3)) {
+			var temp = num2;
+			num2 = num3;
+			num3 = temp;
+
+			// agora que o número 2 foi trocado, precisamos compará-lo com o número 1 novamente
+			if (parseFloat(num1) > parseFloat(num2)) {
+				var temp = num1;
+				num1 = num2;
+				num2 = temp;
+			}
+		}
+
+		if (parseFloat(num3) > parseFloat(num4)) {
+			var temp = num3;
+			num3 = num4;
+			num4 = temp;
+
+			// agora que o número 3 foi trocado, precisamos compará-lo com os outros números novamente
+			if (parseFloat(num2) > parseFloat(num3)) {
+				var temp = num2;
+				num2 = num3;
+				num3 = temp;
+
+				if (parseFloat(num1) > parseFloat(num2)) {
+					var temp = num1;
+					num1 = num2;
+					num2 = temp;
+				}
+			}
+		}
+
+		// exibir os números em ordem crescente
+		document.write('Os números em ordem crescente são: ' + num1 + ', ' + num2 + ', ' + num3 + ', ' + num4 + '<br>');
+
+
+		// calcular a média
+		var media = (parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4)) / 4;
+		document.write('A média: ' + parseFloat(media) + '<br>');
+
+		// calcular a moda
+		let moda;
+		let count = 0;
+		if (num1 == num2) {
+			count++;
+			moda = num1;
+		}
+		if (num1 == num3) {
+			count++;
+			moda = num1;
+		}
+
+		if (num1 == num4) {
+			count++;
+			moda = num1;
+		}
+		if (num2 == num3) {
+			count++;
+			moda = num2;
+		}
+		if (num2 == num4) {
+			count++;
+			moda = num2;
+		}
+		if (num3 == num4) {
+			count++;
+			moda = num3;
+		}
+		if (num1 == num2 & num1 == num3 & num1 == num4) {
+			document.write("A moda é " + num1 + '.<br>');
+		} else if (count == 0) {
+			document.write("Não há moda" + '.<br>');
+		} else if (count == 1) {
+			document.write("A moda é " + moda + '.<br>');
+		} else if (count == 2) {
+			document.write("A moda é " + moda + '.<br>');
+		} else if (count == 3) {
+			document.write("A moda é " + moda + '.<br>');
+		} else if (count == 4) {
+			document.write("A moda é " + moda + '.<br>');
+		} else {
+			document.write("Há mais de uma moda" + '.<br>');
+		}
+
+		// calculando a mediana
+
+		var mediana = (parseFloat(num2) + parseFloat(num3)) / 2;
+
+		document.write('A mediana é: ' + parseFloat(mediana) + '.<br>');
+
+		//Desvio Padrão e Variância
+
+		// calcular a variancia
+		var dif1 = num1 - media;
+		var dif2 = num2 - media;
+		var dif3 = num3 - media;
+		var dif4 = num4 - media;
+		var somaQuadradosDif = (dif1 * dif1) + (dif2 * dif2) + (dif3 * dif3) + (dif4 * dif4);
+		var variancia = (somaQuadradosDif / 3);
+
+
+
+		// calcular o desvio padrão
+		var desvioPadrao = 0;
+		if (somaQuadradosDif > 0) {
+			desvioPadrao = Math.sqrt(variancia);
+		}
+
+
+
+		document.write("A variancia é: " + variancia + '.<br>');
+		document.write("O desvio padrão dos quatro números é: " + desvioPadrao + '.<br>');
+
+
+	</script>
+</head>
+
+<body>
+	<!---->
+</body>
+
+</html>

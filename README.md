@@ -6,4 +6,4 @@ Projeto desenvolvido em Java Script com auxílio do professor em sala de aula, p
 
 # Link do Projeto Hospedado
 
- * [Projeto](file:///C:/Users/valeria.sousa/Downloads/ATIVIDADE%20ESTAT%C3%8DSTICA-1.html)
+ * [Projeto]:file:///C:/Users/valeria.sousa/Downloads/ATIVIDADE%20ESTAT%C3%8DSTICA-1.html

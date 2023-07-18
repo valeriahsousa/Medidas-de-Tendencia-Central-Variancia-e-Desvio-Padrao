@@ -7,3 +7,10 @@ Projeto desenvolvido em Java Script/HTML com auxílio do professor em sala de au
 # Link do Projeto Hospedado
 
  * Projeto: file:///C:/Users/valeria.sousa/Downloads/ATIVIDADE%20ESTAT%C3%8DSTICA-1.html
+
+ ## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- HTML
+- JavaScript
